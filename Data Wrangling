@@ -1,0 +1,27 @@
+import pandas as pd
+import numpy as np
+df = pd.read_csv("C:/Users/kadan/Desktop/Dataset/sales_data.csv")
+
+# Pandas formulae
+print(df.head())
+print(df.isnull())
+print(df.isna())
+print(df.tail())
+print(df.size)
+print(df.shape)
+print(df.info())
+print(df.describe())
+df = df.dropna()
+print(df)
+df = df.drop_duplicates()
+print(df)
+
+#Math using numpy
+mean_1 = np.nanmean(df['QUANTITYORDERED'])
+print(mean_1)
+
+sum_1 = np.nansum(df['QUANTITYORDERED'])
+print(sum_1)
+
+median_1 = np.nanmedian(df['QUANTITYORDERED'])
+print(median_1)
